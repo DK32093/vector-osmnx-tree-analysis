@@ -1,15 +1,27 @@
-# Cambridge-Street-Trees
+# vector-osmnx-tree-analysis
 
-This project was a fun way to practice some of my geospatial Python skills. I chose to use data from my home city of Cambridge, Massachusetts available through the fantastic [Cambridge GIS website](https://www.cambridgema.gov/GIS).
+A Python‑based vector workflow analyzing street tree density across Cambridge, MA zoning districts using GeoPandas, OSMnx, and OpenStreetMap road networks.
 
-I used the city’s base zoning districts and grouped them into the [broad categories provided here](https://www.cambridgema.gov/-/media/Files/CDD/Maps/Zoning/cddmap_zoning_base_11x17_20240221.pdf). I also obtained point data representing street trees. I then used the OSMnx and GeoPandas Python libraries to calculate the total road length in each district using OpenStreetMap data. Finally, I calculated the number of street trees per meter of road for each zone category and extracted the most common tree species.
+## Tech Stack
+- Python
+- GeoPandas
+- OSMnx
+- Matplotlib
 
-This was a fun way to practice working with vector layers and creating geospatial graphics using only Python. I took inspiration for this project from the great [Python Foundation series](https://www.youtube.com/playlist?list=PLppGmFLhQ1HJspXSA0asH9kw1OhlLrxHT) by Spatial Thoughts and [Luigi Carboni’s project](https://nbviewer.org/github/luicarboni/My_Projects/blob/master/Starting_with_OSMnx.ipynb) Retrieving and Visualizing Data from OpenStreetMap.
+## Workflow
+- Load zoning polygons and group them into broad categories.
+- Load street tree point data from Cambridge GIS.
+- Use OSMnx to extract road networks and compute road length per zone.
+- Calculate trees-per-meter metrics for each zone category.
+- Identify the most common tree species per zone.
+- Visualize results using Python-only geospatial plotting.
 
-[View the code here](Cambridge_Zones_Trees.ipynb)
+## Data Sources
+- Cambridge Zoning Categories:https://www.cambridgema.gov/-/media/Files/CDD/Maps/Zoning/cddmap_zoning_base_11x17_20240221.pdf
+- Cambridge GIS Zoning Districts: https://www.cambridgema.gov/GIS/gisdatadictionary/CDD/CDD_ZoningDistricts
+- Cambridge GIS Street Trees: https://www.cambridgema.gov/GIS/gisdatadictionary/Environmental/ENVIRONMENTAL_StreetTrees
+- Road Network: OpenStreetMap (via OSMnx)
 
-[View the Street trees data here](https://www.cambridgema.gov/GIS/gisdatadictionary/Environmental/ENVIRONMENTAL_StreetTrees)
-
-[View the zones data here](https://www.cambridgema.gov/GIS/gisdatadictionary/CDD/CDD_ZoningDistricts)
+ I took inspiration for this project from the [Python Foundation series](https://www.youtube.com/playlist?list=PLppGmFLhQ1HJspXSA0asH9kw1OhlLrxHT) by Spatial Thoughts.
 
 ![image](https://github.com/user-attachments/assets/e8fc942b-1d7f-4563-9bf5-bfe109570609)
